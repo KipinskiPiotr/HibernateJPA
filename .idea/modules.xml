@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PKipinskiJPAPractise.iml" filepath="$PROJECT_DIR$/PKipinskiJPAPractise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/db-derby-10.14.2.0-bin/demo/demo.iml" filepath="$PROJECT_DIR$/db-derby-10.14.2.0-bin/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/db-derby-10.14.2.0-bin/demo/programs/scores/java/scores.iml" filepath="$PROJECT_DIR$/db-derby-10.14.2.0-bin/demo/programs/scores/java/scores.iml" />
+      <module fileurl="file://$PROJECT_DIR$/db-derby-10.14.2.0-bin/demo/programs/vtis/vtis.iml" filepath="$PROJECT_DIR$/db-derby-10.14.2.0-bin/demo/programs/vtis/vtis.iml" />
+    </modules>
+  </component>
+</project>

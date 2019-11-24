@@ -1,0 +1,195 @@
+Sun Nov 24 17:15:06 CET 2019 : Serwer sieciowy Apache Derby - 10.14.2.0 - (1828579) uruchomiony i gotowy do zaakceptowania po³¹czeñ na porcie 1527 w {3} 
+----------------------------------------------------------------
+Sun Nov 24 17:15:12 CET 2019:
+ Uruchamianie wersji The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579) systemu Derby: instancja a816c00e-016e-9e31-fc61-00001d67fd64
+w katalogu bazy danych C:\Users\Piotr\Documents\PKipinskiJPAPractise\db-derby-10.14.2.0-bin\bin\PKipinskiJPAP sun.misc.Launcher$AppClassLoader@610455d6 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_231-b11
+user.dir=C:\Users\Piotr\Documents\PKipinskiJPAPractise\db-derby-10.14.2.0-bin\bin
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=C:\Users\Piotr\Documents\PKipinskiJPAPractise\db-derby-10.14.2.0-bin\bin
+Uruchomiono program ³aduj¹cy klasê bazy danych - derby.database.classpath=''
+Sun Nov 24 18:23:16 CET 2019 Thread[DRDAConnThread_2,5,main] Cleanup action starting
+java.sql.SQLException: Uruchomienie bazy danych 'PKipinskiJPAP?create=true' nie powiod³o siê. Szczegó³y zawiera nastêpny wyj¹tek.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: ERROR XJ040: Uruchomienie bazy danych 'PKipinskiJPAP?create=true' nie powiod³o siê. Szczegó³y zawiera nastêpny wyj¹tek.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 19 more
+Caused by: java.io.IOException: Invalid argument
+	at java.io.WinNTFileSystem.canonicalize0(Native Method)
+	at java.io.WinNTFileSystem.canonicalize(Unknown Source)
+	at java.io.File.getCanonicalPath(Unknown Source)
+	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
+	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
+	at org.apache.derby.impl.io.DirStorageFactory.init(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService$12.run(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService$12.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$4.run(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.jdbc.EmbedConnection.startPersistentService(Unknown Source)
+	... 16 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: Wyj¹tek Java: 'Invalid argument: java.io.IOException'.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: ERROR XJ001: Wyj¹tek Java: 'Invalid argument: java.io.IOException'.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 20 more
+Caused by: java.io.IOException: Invalid argument
+	at java.io.WinNTFileSystem.canonicalize0(Native Method)
+	at java.io.WinNTFileSystem.canonicalize(Unknown Source)
+	at java.io.File.getCanonicalPath(Unknown Source)
+	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
+	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
+	at org.apache.derby.impl.io.DirStorageFactory.init(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService$12.run(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService$12.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$4.run(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.jdbc.EmbedConnection.startPersistentService(Unknown Source)
+	... 16 more
+============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+ERROR XJ001: Wyj¹tek Java: 'Invalid argument: java.io.IOException'.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.javaException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: java.io.IOException: Invalid argument
+	at java.io.WinNTFileSystem.canonicalize0(Native Method)
+	at java.io.WinNTFileSystem.canonicalize(Unknown Source)
+	at java.io.File.getCanonicalPath(Unknown Source)
+	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
+	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
+	at org.apache.derby.impl.io.DirStorageFactory.init(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService$12.run(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService$12.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$4.run(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.jdbc.EmbedConnection.startPersistentService(Unknown Source)
+	... 16 more
+============= end nested exception, level (2) ===========
+============= begin nested exception, level (3) ===========
+java.io.IOException: Invalid argument
+	at java.io.WinNTFileSystem.canonicalize0(Native Method)
+	at java.io.WinNTFileSystem.canonicalize(Unknown Source)
+	at java.io.File.getCanonicalPath(Unknown Source)
+	at org.apache.derby.impl.io.DirStorageFactory.doInit(Unknown Source)
+	at org.apache.derby.impl.io.BaseStorageFactory.init(Unknown Source)
+	at org.apache.derby.impl.io.DirStorageFactory.init(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.privGetStorageFactoryInstance(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.access$400(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService$12.run(Unknown Source)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService$12.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.services.monitor.StorageFactoryService.getCanonicalServiceName(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(Unknown Source)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$4.run(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.impl.jdbc.EmbedConnection.startPersistentService(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.derby.jdbc.InternalDriver.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.Database.makeConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+============= end nested exception, level (3) ===========
+Cleanup action completed
+Sun Nov 24 18:23:16 CET 2019 Thread[DRDAConnThread_2,5,main] (DATABASE = PKipinskiJPAP?create=true), (DRDAID = {31}), Uruchomienie bazy danych 'PKipinskiJPAP?create=true' nie powiod³o siê. Szczegó³y zawiera nastêpny wyj¹tek.
+Sun Nov 24 18:23:16 CET 2019 Thread[DRDAConnThread_2,5,main] (DATABASE = PKipinskiJPAP?create=true), (DRDAID = {31}), Wyj¹tek Java: 'Invalid argument: java.io.IOException'.

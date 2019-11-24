@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Intellij">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Intellij.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
