@@ -6,12 +6,13 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
 <persistence-unit name="myDatabaseConfig"
                   transaction-type="RESOURCE_LOCAL">
+    <mapping-file>META-INF/invoiceQueries.xml</mapping-file>
     <properties>
         <property name="hibernate.connection.driver_class"
                   value="org.apache.derby.jdbc.ClientDriver"/>
         <property name="hibernate.connection.url"
                   value="jdbc:derby://127.0.0.1/PKipinskiJPAP"/>
-        <property name="hibernate.show_sql" value="true" />
+        <!-- <property name="hibernate.show_sql" value="true" /> -->
         <property name="hibernate.format_sql" value="true" />
         <property name="hibernate.hbm2ddl.auto" value="create" />
     </properties>

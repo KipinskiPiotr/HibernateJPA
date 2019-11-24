@@ -33,7 +33,6 @@ public class Main {
 
     public static void generateData(){
         final Session session = getSession();
-        Transaction tx = null;
         try {
             Product kalafior = new Product("Kalafior", 10);
             Product marchew = new Product("Marchew", 15);
@@ -61,7 +60,7 @@ public class Main {
             inv2.addProduct(marchew, 1);
             inv2.addProduct(sok, 5);
 
-            tx = session.beginTransaction();
+            Transaction tx = session.beginTransaction();
             session.save(kalafior);
             session.save(marchew);
             session.save(woda);
@@ -125,22 +124,19 @@ public class Main {
 
     public static void main(final String[] args) throws Exception {
         generateData();
-        //jpaDemo();
-        final Session session = getSession();
-        //Transaction tx = null;
-        try {
-            //tx = session.beginTransaction();
-            Customer cust = session.get(Customer.class, 9);
-            System.out.println(cust.getCompanyName());
-            for(Invoice i: cust.getInvoices()){
-                System.out.println(i.getInvoiceNumber());
-                for(ProductInvoice p: i.getProductInvoices()){
-                    System.out.println(p.getQuantity() + " x " + p.getProduct().getProductName());
-                }
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("myDatabaseConfig");
+        EntityManager em = emf.createEntityManager();
+
+        List<Invoice> invoices = em.createNamedQuery("searchByCustomerName")
+                .setParameter("name","KustomerCompany").getResultList();
+
+        for(Invoice i: invoices){
+            for(ProductInvoice pi: i.getProductInvoices()){
+                System.out.println(pi.getQuantity() + " x " + pi.getProduct().getProductName());
             }
-            //tx.commit();
-        } finally {
-            session.close();
         }
+
+        em.close();
     }
 }
